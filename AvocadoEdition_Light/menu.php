@@ -106,6 +106,7 @@ if($header_pos['cs_value'] != 'N') {
 				<? } ?>
 
 				<? if(defined('_INDEX_')) { ?>
+					<? if($config['cf_bgm']) { ?>
 					<li class="bgm-btn">
 						<div id="site_bgm_box">
 							<iframe src="./bgm.php" name="bgm_frame" id="bgm_frame" border="0" frameborder="0" marginheight="0" marginwidth="0" topmargin="0" scrolling="no" allowTransparency="true"></iframe>
@@ -120,6 +121,7 @@ if($header_pos['cs_value'] != 'N') {
 							<span class="tooltips">BGM OFF</span>
 						</a>
 					</li>
+					<? } ?>
 				<? } ?>
 			</ul>
 		</div></div>
