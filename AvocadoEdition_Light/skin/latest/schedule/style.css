@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* SIR 지운아빠 */ 
+ 
+#bo_list table{border-spacing:1px;border-collapse:separate;}
+#bo_list .theme-list th{ line-height:30px;padding:0;}
+#bo_list .theme-list th.sat{background-color:#1d388a;}
+#bo_list .theme-list th.sun{background-color:#6f0020;}
+#bo_list .theme-list td {text-align:center;height:25px;padding:5px 0;line-height:25px;}
+#bo_list .theme-list td.days{}
+#bo_list .theme-list td.days a{color:#fff;}
+#bo_list .theme-list td.today{background-color:rgba(83,64,130,0.7);}
+#bo_list .theme-list td.noday{background-color:rgba(50,50,50,0.4);}
+.cal-nav.theme-box{padding:0;}
+.cal-nav h2{text-align:center; font-size:15px;line-height:45px;}
+.cal-nav h2 a{line-height:45px;}
+.cal-nav h2 a:before,.cal-nav h2 a:after{content:"◈";font-style:normal;font-size:13px;padding:0 10px;} 
+
+ /* 스케줄 */
+#bo_list .popup_layer {position:absolute; display:none; width:90px; padding:5px 10px; background-color:#534082; z-index:2;}
+#bo_list .popup_layer .popup_title{padding:5px 0;font-size:14px;}
+#bo_list .popup_layer .popup_cont{font-size:12px;}
+#today_schedule {text-align:left; } 
+#today_schedule p.ui-btn.point{margin-bottom:10px;} 
+
+#bo_cate h2 {position:absolute;font-size:0;line-height:0;overflow:hidden} 
+
+/*표시색상*/
+.color_1{background:rgba(255, 195, 0, 0.7);}
+.color_2{background:rgba(123, 104, 238, 0.7);}
+.color_3{background:rgba(32, 178, 170, 0.7);} 
+.color_4{background:rgba(199, 0, 57, 0.7);}
