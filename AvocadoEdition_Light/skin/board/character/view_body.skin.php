@@ -134,6 +134,7 @@ if($body_cnt > 0) {
 
 			if(img) {
 				$('.ch-body .img img').attr('src', img);
+				$('.ch-body .img em').css('background-image', 'url('+img+')');
 			}
 
 			$('.chaBodyList .checked').removeClass('checked');
