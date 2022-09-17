@@ -1,15 +1,7 @@
 <?php
 if (!defined("_GNUBOARD_")) exit; // 개별 페이지 접근 불가
-
+include_once($board_skin_path.'/_setting.php');
 // 두상 및 전신 저장 처리
-
-
-$character_image_path = G5_DATA_PATH."/file/".$bo_table;
-$character_image_url = G5_DATA_URL."/file/".$bo_table;
-
-@mkdir($character_image_path, G5_DIR_PERMISSION);
-@chmod($character_image_path, G5_DIR_PERMISSION);
-
 
 $sql_article = " wr_ing = '{$wr_ing}',
 				wr_4_txt = '{$wr_4_txt}',

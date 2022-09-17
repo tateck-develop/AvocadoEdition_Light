@@ -2,6 +2,7 @@
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
 //-- 리스트 정렬을 임의로 조정 하는 기능을 합니다.
+include_once($board_skin_path.'/_setting.php');
 include_once($board_skin_path.'/list.order.skin.php');
 
 $category_list = get_category_list($bo_table, $sca);
