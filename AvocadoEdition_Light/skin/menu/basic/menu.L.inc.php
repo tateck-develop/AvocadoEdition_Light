@@ -76,17 +76,17 @@ add_stylesheet('<link rel="stylesheet" href="'.$menu_skin_url.'/css/style.L.css"
 		<? } ?>
 	<? } ?>
 
-	<? if(defined('_INDEX_')) { ?>
+	<? if(defined('_INDEX_') && $config['cf_bgm']) { ?>
 		<li class="bgm-btn">
 			<div id="site_bgm_box">
-				<iframe src="./bgm.php" name="bgm_frame" id="bgm_frame" border="0" frameborder="0" marginheight="0" marginwidth="0" topmargin="0" scrolling="no" allowTransparency="true"></iframe>
+				<iframe src="./bgm.php?action=play" name="bgm_frame" id="bgm_frame" border="0" frameborder="0" marginheight="0" marginwidth="0" topmargin="0" scrolling="no" allowTransparency="true"></iframe>
 			</div>
 
-			<a href="<?=G5_URL?>/bgm.php?action=play" target="bgm_frame"  onclick="return fn_control_bgm('play')" class="control-bgm-play">
+			<a href="<?=G5_URL?>/bgm.php?action=play" target="bgm_frame"  onclick="return fn_control_bgm('play')" class="control-bgm-play" style="display:none;">
 				<span class="icons"><span><i class="material-icons">music_off</i></span></span>
 				<span class="tooltips">BGM ON</span>
 			</a>
-			<a href="<?=G5_URL?>/bgm.php" target="bgm_frame" onclick="return fn_control_bgm('stop')" class="control-bgm-stop" style="display:none;">
+			<a href="<?=G5_URL?>/bgm.php" target="bgm_frame" onclick="return fn_control_bgm('stop')" class="control-bgm-stop">
 				<span class="icons"><span><i class="material-icons">music_note</i></span></span>
 				<span class="tooltips">BGM OFF</span>
 			</a>
