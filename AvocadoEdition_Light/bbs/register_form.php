@@ -27,7 +27,7 @@ if ($w == "") {
 	// 리퍼러 체크
 	referer_check();
 
-	if (!isset($_POST['agree']) || !$_POST['agree']) {
+	/*if (!isset($_POST['agree']) || !$_POST['agree']) {
 		goto_url(G5_BBS_URL.'/register.php');
 	}
 
@@ -36,7 +36,7 @@ if ($w == "") {
 	}
 
 	$agree  = preg_replace('#[^0-9]#', '', $_POST['agree']);
-	$agree2 = preg_replace('#[^0-9]#', '', $_POST['agree2']);
+	$agree2 = preg_replace('#[^0-9]#', '', $_POST['agree2']);*/
 
 	$member['mb_birth'] = '';
 	$member['mb_sex']   = '';
@@ -131,8 +131,8 @@ $req_nick = !isset($member['mb_nick_date']) || (isset($member['mb_nick_date']) &
 $required = ($w=='') ? 'required' : '';
 $readonly = ($w=='u') ? 'readonly' : '';
 
-$agree  = preg_replace('#[^0-9]#', '', $agree);
-$agree2 = preg_replace('#[^0-9]#', '', $agree2);
+//$agree  = preg_replace('#[^0-9]#', '', $agree);
+//$agree2 = preg_replace('#[^0-9]#', '', $agree2);
 
 // add_javascript('js 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 if ($config['cf_use_addr'])
