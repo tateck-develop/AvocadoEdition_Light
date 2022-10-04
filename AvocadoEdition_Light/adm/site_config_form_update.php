@@ -59,6 +59,7 @@ $sql = " update {$g5['config_table']}
 				cf_site_descript	= '{$_POST['cf_site_descript']}',
 				cf_favicon			= '{$_POST['cf_favicon']}',
 				cf_cursor			= '{$_POST['cf_cursor']}',
+				cf_site_img			= '{$_POST['cf_site_img']}',
 				cf_bgm				= '{$_POST['cf_bgm']}',
 				cf_possible_ip		= '".trim($_POST['cf_possible_ip'])."',
 				cf_intercept_ip		= '".trim($_POST['cf_intercept_ip'])."',
