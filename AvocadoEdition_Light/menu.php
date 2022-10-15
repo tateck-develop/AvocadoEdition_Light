@@ -23,7 +23,7 @@ if($header_pos['cs_value'] != 'N') {
 	</div>
 
 	<!-- PC 메뉴 영역 -->
-	<header id="header">
+	<header id="header" data-headerpos="<?=$header_pos['cs_value']?>">
 		<?
 			@include_once($menu_skin_path."/css.config.php");
 			@include_once($menu_skin_path."/menu.{$header_pos['cs_value']}.inc.php");
