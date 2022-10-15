@@ -110,7 +110,7 @@
 .characterViewer .ch-body.pop::-webkit-scrollbar {width:0; height:0;}
 .characterViewer .ch-body.pop .img > div {display:block;}
 
-.characterViewer .ch-pannel {position:relative; margin:0 auto; max-width:640px; padding:20px 40px; box-sizing:border-box; border:1px solid var(--pannel-line); background:var(--pannel-bak); backdrop-filter:blur(2px);
+.characterViewer .ch-pannel {position:relative; margin:0 auto; max-width:640px; padding:80px 40px; box-sizing:border-box; border:1px solid var(--pannel-line); background:var(--pannel-bak); backdrop-filter:blur(2px);
 	-webkit-box-shadow:0 0 20px 0 rgba(0,0,0,0.1);
 	-moz-box-shadow:0 0 20px 0 rgba(0,0,0,0.1);
 	box-shadow:0 0 20px 0 rgba(0,0,0,0.1);
@@ -168,7 +168,7 @@
 	.characterViewer .ch-body.pop .img em {display:none;}
 	.characterViewer .ch-body.pop .img div img {display:block;}
 
-	.characterViewer .ch-pannel {width:95%; background:var(--pannel-bak-over);}
+	.characterViewer .ch-pannel {width:95%; background:var(--pannel-bak-over); padding-top:40px; padding-bottom:40px;}
 	.characterViewer .ch-body ~ .ch-pannel {position:relative; top:auto; bottom:auto; right:auto; width:auto; height:auto; float:none; margin:60vh auto 0;}
 }
 
