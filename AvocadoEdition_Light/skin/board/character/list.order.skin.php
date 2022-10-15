@@ -80,29 +80,32 @@ if (!$sca) {
 	$from_notice_idx = ($page - 1) * $page_rows;
 	if($from_notice_idx < 0)
 		$from_notice_idx = 0;
+	$arr_notice = array_filter($arr_notice);
 	$board_notice_count = count($arr_notice);
 
-	for ($k=0; $k<$board_notice_count; $k++) {
-		if (trim($arr_notice[$k]) == '') continue;
+	if($board_notice_count > 0) {
+		$pair_str = implode("' or wr_id = '", $arr_notice);
+		$pair_str = "wr_id = '".$pair_str."'";
+		$pair_sql = " select * from {$write_table} where {$pair_str} order by wr_ing desc, wr_subject asc ";
+		$notice_result = sql_query($pair_sql);
 
-		$row = sql_fetch(" select * from {$write_table} where wr_id = '{$arr_notice[$k]}' ");
+		for($k=0; $row = sql_fetch_array($notice_result); $k++) {
+			if (!$row['wr_id']) continue;
+			$notice_array[] = $row['wr_id'];
 
-		if (!$row['wr_id']) continue;
+			if($k < $from_notice_idx) continue;
+			if($sst != 'wr_id') {
+				$list[$i] = get_list($row, $board, $board_skin_url, G5_IS_MOBILE ? $board['bo_mobile_subject_len'] : $board['bo_subject_len']);
+				$list[$i]['is_notice'] = true;
 
-		$notice_array[] = $row['wr_id'];
-
-		if($k < $from_notice_idx) continue;
-
-		if($sst != 'wr_id') {
-			$list[$i] = get_list($row, $board, $board_skin_url, G5_IS_MOBILE ? $board['bo_mobile_subject_len'] : $board['bo_subject_len']);
-			$list[$i]['is_notice'] = true;
-
-			$i++;
-			$notice_count++;
-			
-			if($notice_count >= $list_page_rows)
-				break;
+				$i++;
+				$notice_count++;
+				
+				if($notice_count >= $list_page_rows)
+					break;
+			}
 		}
+
 	}
 }
 

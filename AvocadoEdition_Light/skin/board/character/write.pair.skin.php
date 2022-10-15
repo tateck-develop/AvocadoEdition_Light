@@ -20,6 +20,12 @@ for($i=0; $row = sql_fetch_array($character_list); $i++) {
 		<input type="text" name="wr_subject" value="<?php echo $subject ?>" required class="frm_input required datepicker" size="12" maxlength="255">
 	</td>
 </tr>
+<tr>
+	<th scope="row">정렬순서</th>
+	<td>
+		<input type="text" name="wr_ing" value="<?php echo $write['wr_ing'] ?>" class="frm_input" size="5" maxlength="255">
+	</td>
+</tr>
 </tbody>
 </table>
 
