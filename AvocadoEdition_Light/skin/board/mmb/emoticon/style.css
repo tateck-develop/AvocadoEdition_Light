@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* -----------------------------------------------
+	* 이모티콘 관리 관련 스타일
+--------------------------------------------------
+	- 최초 작성일 :2022.12.17
+	- 최초 작성자 :아보카도
+	- 최종 수정일 :
+	- 최종 수정자 :
+--------------------------------------------------*/
+
+#emoticon_page {display:block; position:relative; padding:20px 20px 80px; max-width:640px; margin:0 auto;}
+
+#emoticon_content {display:block; position:relative;}
+#emoticon_content .no-data {text-align:center; padding:100px 10px;}
+#emoticon_content ul:after {content:""; display:block; clear:both;}
+#emoticon_content ul li {display:inline-block; position:relative; width:25%; vertical-align:top; text-align:center; padding:5px; box-sizing:border-box;}
+#emoticon_content .thumb {display:block; position:relative; height:70px; overflow:hidden;}
+#emoticon_content .thumb img {display:block; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); max-width:100%; max-height:100%;}
+#emoticon_content .txt span {display:block;}
+
+#emoticon_control {position:fixed; left:0; right:0; bottom:0; padding:10px; border-bottom-left-radius:0 !important; border-bottom-right-radius:0 !important;}
+#emoticon_control .inner {display:block; position:relative; padding-right:110px; box-sizing:border-box; max-width:640px; margin:0 auto;}
+#emoticon_control .is-btn-box {display:block; position:absolute; top:0; right:0; bottom:0;}
+#emoticon_control .emoticon-add-form {display:block; position:relative; padding-left:60px; min-height:50px;}
+#emoticon_control .emoticon-add-form .img {display:block; position:absolute; left:0; top:0; width:50px; height:50px; padding:0 !important; overflow:hidden; z-index:0;}
+#emoticon_control .emoticon-add-form .img span {display:table; position:absolute; top:0; left:0; right:0; bottom:0; width:100%; height:100%; padding:0; z-index:-1;}
+#emoticon_control .emoticon-add-form .img span > * {display:table-cell; vertical-align:middle; text-align:center; font-size:2em;}
+#emoticon_control .emoticon-add-form .img input[type="file"] {display:block; position:absolute; top:0; left:0; width:100%; height:100% !important; z-index:1; opacity:0; cursor:pointer;}
+#emoticon_control .emoticon-add-form .img img {display:block; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); max-width:90%; max-height:90%; z-index:0;}
+#emoticon_control .emoticon-add-form .txt input {height:50px !important;}
+#emoticon_control .is-btn-box .ui-btn {width:50px !important; height:50px !important; word-break:keep-all;} 

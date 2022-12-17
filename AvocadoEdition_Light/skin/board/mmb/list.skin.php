@@ -1,6 +1,7 @@
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 include_once(G5_LIB_PATH.'/thumbnail.lib.php');
+include_once($board_skin_path.'/emoticon/_setting.emoticon.php');
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 
 set_session('ss_bo_table', $_REQUEST['bo_table']);
@@ -39,6 +40,7 @@ $owner_behind = $owner_behind['cs_etc_4'];
 		<a href="<?php echo $write_href ?>" class="ui-btn point">등록하기</a>
 	<? } ?>
 		<a href="<?php echo $list_href ?>" class="ui-btn">새로고침</a>
+		<a href="<?php echo $board_skin_url ?>/emoticon/" class="ui-btn etc new_win">이모티콘</a>
 	</div>
 
 	<? if($write_pages) { ?><?php echo $write_pages; ?><? } ?>
