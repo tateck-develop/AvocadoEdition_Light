@@ -4,9 +4,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 ?>
 
 
-<div id="password_box">
-	<h1 class="ui-btn point">비밀번호 확인</h1>
-	<div class="descript theme-box">
+<div id="password_box" class="theme-box">
+	<h1>비밀번호 확인</h1>
+	<hr class="line" />
+	<div class="descript">
 		<p>
 			<strong>비밀번호를 한번 더 입력해주세요.</strong>
 			<?php if ($url == 'member_leave.php') { ?>
@@ -37,11 +38,10 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 
 		</div>
 	</div>
-
+	<hr class="line" />
 	<div class="btn_confirm">
 		<a href="<?php echo G5_URL ?>" class="ui-btn">메인으로 돌아가기</a>
 	</div>
-
 </div>
 
 <script>

@@ -73,28 +73,15 @@
 
 /*** PASSWORD ***/
 
-#password_box	{
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -150px;
-	margin-left: -150px;
-	width: 300px;
-	height: 200px;
-}
+#password_box {display:block; position:absolute; top:50%; left:50%; width:300px; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%);}
 
-#password_box h1	{display:none;}
-#password_box h1 + .theme-box	{ border-top-width: 0; margin-bottom: 3px; }
-
-#password_box .pass-form	{ 
-	position: relative;
-	padding-right: 80px;
-	margin-top: 10px;
-}
-#password_box .pass-form fieldset				{ display: block; }
-#password_box .pass-form fieldset +	fieldset	{ margin-top: 3px; }
-#password_box .pass-form .box-btn	{
+#password_box h1 {display:block; width:100%; height:auto; padding:.5em; font-size:1.2em; text-align:center;}
+#password_box h1 + .theme-box { border-top-width: 0; margin-bottom: 3px; }
+#password_box .descript strong {display:block;}
+#password_box .pass-form {position:relative; padding-right:80px; margin-top:10px;}
+#password_box .pass-form fieldset { display: block; }
+#password_box .pass-form fieldset +	fieldset { margin-top: 3px; }
+#password_box .pass-form .box-btn {
 	display: block;
 	position: absolute;
 	margin: 0;
@@ -109,6 +96,4 @@
 	height: 100%;
 	padding: 0;
 }
-#password_box .btn_confirm .ui-btn	{
-	width: 100%;
-}
+#password_box .btn_confirm {padding:0;}
