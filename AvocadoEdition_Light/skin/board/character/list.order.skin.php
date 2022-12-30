@@ -83,9 +83,17 @@ if (!$sca) {
 	$arr_notice = array_filter($arr_notice);
 	$board_notice_count = count($arr_notice);
 
-	if($board_notice_count > 0) {
+	if($sst == 'wr_id') {
+		// 전체 목록인 경우, 게시글 개수에서 공지글 제외
+		$total_count -= $board_notice_count;
+	}
+	else if($board_notice_count > 0) {
 		$pair_str = implode("' or wr_id = '", $arr_notice);
 		$pair_str = "wr_id = '".$pair_str."'";
+		// 페어 목록인 경우, 페어 목록만 추출하고 게시글 개수를 공지글로 한정
+		$pair_str = "({$pair_str}) and wr_type = 'pair'";
+		$total_count = $board_notice_count;
+
 		$pair_sql = " select * from {$write_table} where {$pair_str} order by wr_ing desc, wr_subject asc ";
 		$notice_result = sql_query($pair_sql);
 
@@ -153,6 +161,11 @@ if ($sca || $stx) {
 	$sql = " select * from {$write_table} where wr_is_comment = 0 ";
 	if(!empty($notice_array))
 		$sql .= " and wr_id not in (".implode(', ', $notice_array).") ";
+	// 전체 목록인 경우, 캐릭터 게시글만 추출. 페어 목록인 경우, 페어 게시글만 추출
+	if($sst=='wr_id' || $board_notice_count < 1)
+		$sql .= " and wr_type != 'pair'";
+	else
+		$sql .= " and wr_type = 'pair'";
 	$sql .= " {$sql_order} limit {$from_record}, $page_rows ";
 }
 
