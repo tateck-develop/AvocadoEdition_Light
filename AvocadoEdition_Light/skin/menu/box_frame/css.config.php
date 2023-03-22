@@ -38,7 +38,7 @@ $f_img_out = $box_f_img['cs_etc_3'] != "" ? $box_f_img['cs_etc_3'] : 0;
 	**************************************************/
 ?>
 
-@media all and (min-width:1025px) {body #header {display:block !important;}}
+@media all and (min-width:1025px) {html.single #header {display:block !important;}}
 
 #design_frameBox {display:block; position:fixed; top:50%; left:50%; z-index:0; box-sizing:border-box;}
 #design_frameBox:before {content:""; display:block; position:absolute; top:0; left:0; right:0; bottom:0; z-index:-1;}

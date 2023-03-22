@@ -1,7 +1,7 @@
 <?php
 if (!defined('_GNUBOARD_')) exit;
 
-if (defined('_INDEX_')) return;
+//if (defined('_INDEX_')) return;
 
 /* *************************************
 	:: 좌측 메뉴 스타일 ::

@@ -19,7 +19,7 @@ if (!defined('_GNUBOARD_')) exit;
 	</colgroup>
 	<tbody>
 		<tr>
-			<th scope="row" rowspan="4">
+			<th scope="row" rowspan="3">
 				<em><?=$css_index?></em>프레임 크기
 				<input type="text" name="cs_name[<?=$css_index?>]" value="box_frame_size" readonly size="15"/>
 			</th>
@@ -49,14 +49,7 @@ if (!defined('_GNUBOARD_')) exit;
 				좌 : <input type="text" name="cs_etc_8[<?=$css_index?>]" value="<?php echo $de['box_frame_size']['cs_etc_8'] ?>" size="5"/> px
 				&nbsp;&nbsp;
 				우 : <input type="text" name="cs_etc_9[<?=$css_index?>]" value="<?php echo $de['box_frame_size']['cs_etc_9'] ?>" size="5"/> px
-			</td></tr><tr>
-			<td class="bo-right txt-center">메뉴위치</td>
-			<td>
-				<select name="cs_etc_10[<?=$css_index?>]">
-					<option value="">박스바깥</option>
-					<option value="1" <?=$de['box_frame_size']['cs_etc_10'] == '1' ? "selected" : ""?>>박스안쪽</option>
-				</select>
-			</td>
+			</td></tr>
 		</tr <? $css_index++; ?>>
 
 		<tr>
