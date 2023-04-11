@@ -85,11 +85,13 @@ label + input {margin-left:10px;}
 .local_desc .point {color:#d18686;}
 .local_desc.pos-top {margin-top:10px; margin-bottom:0;}
 
-.pg_wrap {display:block; position:relative; text-align:center; padding:0 0 30px 0;}
-
+.pg_wrap {display:block; position:relative; text-align:center; padding:30px 0 30px 0;}
+.pg_wrap span {display:inline-block; position:relative; text-align:center; vertical-align:middle; margin:0 10px;}
 .pg_wrap strong,
-.pg_wrap a {display:inline-block; padding:0 10px; min-width:10px; height:30px; line-height:30px; text-align:center; border:1px solid #dadada; text-decoration:none;}
-.pg_wrap strong {background:#d18686; color:#fff; border-color:#22a3a5;}
+.pg_wrap a {display:inline-block; padding:0 10px; min-width:10px; height:30px; line-height:30px; text-align:center; background:#fafafa; text-decoration:none; vertical-align:middle; border-radius:9em;}
+.pg_wrap strong {background:#d18686; color:#fff; border-color:#d18686;}
+.pg_wrap .pg_control {width:30px; padding:0; box-sizing:border-box; border:none;}
+.pg_wrap .pg_control * {line-height:30px;}
 
 .btn_list01 {position:relative; padding:20px 0;}
 .local_desc.pos-top + .btn_list01 {padding-top:10px;}
