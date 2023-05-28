@@ -10,18 +10,13 @@ if(!$is_admin) {
 	}
 }
 
+sql_query("update {$g5['character_body_table']} set bd_use = '' where wr_id = '{$wr_id}'");
 $bd = sql_fetch("select * from {$g5['character_body_table']} where bd_id = '{$bd_id}'");
 if($bd['bd_id']) {
 	$sql = " update {$g5['character_body_table']}
 				set bd_use = '1'
 				where bd_id = '{$bd['bd_id']}'";
 	sql_query($sql);
-} else {
-	$sql = " update {$g5['character_body_table']}
-				set bd_use = ''
-				where wr_id = '{$wr_id}'";
-	sql_query($sql);
-
 }
 
 ?>
