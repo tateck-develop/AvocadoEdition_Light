@@ -65,7 +65,7 @@ if($config['cf_add_meta'])
 
 <title><?php echo $g5_head_title; ?></title>
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
 <?
 if (defined('G5_IS_ADMIN')) {
 	echo '<link rel="stylesheet" href="'.G5_ADMIN_URL.'/css/admin.css" type="text/css">'.PHP_EOL;
